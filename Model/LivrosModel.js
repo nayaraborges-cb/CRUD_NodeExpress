@@ -1,4 +1,3 @@
-//const { timeStamp } = require("console");
 const db = require("../Config/db.js");
 
 const LivrosModel = db.sequelize.define("livros", {
