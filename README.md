@@ -13,7 +13,7 @@ Sobre instalações:
   * npm install --save pg pg-hstore # Postgres  
 * PostgreSQL - npm install pg
 
-#### 🧐 Observações:
+#### Observações:
 * Por força do ábito quase usei **app.get** mas por ser node e não apenas Javascript usei o async/await por causa do banco de dados e imaginando o uso em projetos reais
 * O banco de dados utilizado foi o Postgresql
   * Seu arquivo está na pasta neste repositório com a finalidade de ilustrar sua existência e utilização
