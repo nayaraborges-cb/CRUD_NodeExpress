@@ -3,19 +3,16 @@ const books_model = require("../model/books_model.js");
 const books_controller  = {
   listar: async (req, res) => {
     try {
-        // Implementação de paginação, uso dos parâmetros 'page' e 'limit' (padrão: página 1, 10 itens por página)
         const page = parseInt(req.query.page) || 1;
         const limit = parseInt(req.query.limit) || 10;
         const offset = (page - 1) * limit;
 
-        // Consulta com paginação, buscando total de livros
         const { count, rows } = await books_model.findAndCountAll({
             order: [["id", "ASC"]],
             limit,
             offset
         });
 
-        // Retorno as informações e dados de paginação
         return res.status(200).json({
             mensagem: "Lista de livros obtida com sucesso",
             totalLivros: count,

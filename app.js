@@ -7,7 +7,6 @@ const livroRoutes = require("./routes/books_routes.js");
 app.use(bodyPaser.urlencoded({ extended: false }));
 app.use(bodyPaser.json());
 
-// Usa as rotas de livros
 app.use("/livros", livroRoutes);
 
 app.listen(3000, function(){
